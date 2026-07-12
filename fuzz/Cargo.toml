@@ -1,0 +1,20 @@
+[package]
+name = "omnimesh-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[dependencies]
+libfuzzer-sys = "0.4"
+omnimesh-core = { path = "../crates/omnimesh-core" }
+omnimesh-sdk = { path = "../crates/omnimesh-sdk" }
+bincode = "1"
+
+[[bin]]
+name = "fuzz_packet_deserializer"
+path = "fuzz_targets/fuzz_packet_deserializer.rs"
+test = false
+doc = false
+
+[workspace]
+# stand-alone workspace for fuzzing to isolate libfuzzer-sys and nightly requirements

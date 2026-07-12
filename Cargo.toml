@@ -1,0 +1,86 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/omnimesh-core",
+    "crates/omnimesh-identity",
+    "crates/omnimesh-crypto",
+    "crates/omnimesh-transport",
+    "crates/omnimesh-routing",
+    "crates/omnimesh-discovery",
+    "crates/omnimesh-service",
+    "crates/omnimesh-sdk",
+    "crates/omnimesh-node",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/omnimesh/omnimesh"
+rust-version = "1.75"
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+bincode = "1"
+toml = "0.8"
+
+# Error handling
+thiserror = "2"
+anyhow = "1"
+
+# Logging & tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# Cryptography
+ed25519-dalek = { version = "2", features = ["serde", "rand_core"] }
+x25519-dalek = { version = "2", features = ["serde"] }
+chacha20poly1305 = "0.10"
+blake3 = "1"
+snow = "0.9"
+rand = "0.8"
+zeroize = { version = "1", features = ["derive"] }
+hkdf = "0.12"
+sha2 = "0.10"
+
+# Networking
+quinn = "0.11"
+rustls = { version = "0.23", features = ["ring"] }
+rcgen = "0.13"
+async-trait = "0.1"
+libp2p = { version = "0.54", features = ["tokio", "tcp", "noise", "yamux", "mdns", "kad", "identify", "macros"] }
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Storage
+redb = "2"
+
+# Utilities
+bytes = "1"
+base64 = "0.22"
+hex = "0.4"
+uuid = { version = "1", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+parking_lot = "0.12"
+dashmap = "6"
+backoff = { version = "0.4", features = ["tokio"] }
+
+# Testing
+tempfile = "3"
+proptest = "1"
+
+# Workspace crate cross-references
+omnimesh-core = { path = "crates/omnimesh-core" }
+omnimesh-identity = { path = "crates/omnimesh-identity" }
+omnimesh-crypto = { path = "crates/omnimesh-crypto" }
+omnimesh-transport = { path = "crates/omnimesh-transport" }
+omnimesh-routing = { path = "crates/omnimesh-routing" }
+omnimesh-discovery = { path = "crates/omnimesh-discovery" }
+omnimesh-service = { path = "crates/omnimesh-service" }
+omnimesh-sdk = { path = "crates/omnimesh-sdk" }

@@ -1,0 +1,16 @@
+[package]
+name = "omnimesh-routing"
+description = "Route graph, metrics collection, and multipath routing for OmniMesh"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+omnimesh-core.workspace = true
+omnimesh-identity.workspace = true
+tokio.workspace = true
+serde.workspace = true
+tracing.workspace = true
+dashmap.workspace = true
+parking_lot.workspace = true

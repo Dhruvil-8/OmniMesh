@@ -1,0 +1,20 @@
+[package]
+name = "omnimesh-discovery"
+description = "Peer discovery via Kademlia DHT, LAN, Bluetooth, and DNS for OmniMesh"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+omnimesh-core.workspace = true
+omnimesh-identity.workspace = true
+tokio.workspace = true
+serde.workspace = true
+tracing.workspace = true
+libp2p.workspace = true
+dashmap.workspace = true
+async-trait.workspace = true
+
+[dev-dependencies]
+tracing-subscriber.workspace = true

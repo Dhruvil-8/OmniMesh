@@ -1,0 +1,24 @@
+[package]
+name = "omnimesh-node"
+description = "CLI binary and daemon for running an OmniMesh node"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "omnimesh"
+path = "src/main.rs"
+
+[dependencies]
+omnimesh-core.workspace = true
+omnimesh-identity.workspace = true
+omnimesh-crypto.workspace = true
+omnimesh-transport.workspace = true
+omnimesh-sdk.workspace = true
+omnimesh-service.workspace = true
+tokio.workspace = true
+async-trait.workspace = true
+clap.workspace = true
+tracing.workspace = true
+anyhow.workspace = true

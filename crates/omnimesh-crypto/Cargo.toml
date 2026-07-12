@@ -1,0 +1,23 @@
+[package]
+name = "omnimesh-crypto"
+description = "Noise protocol, AEAD encryption, key derivation, and secure channels for OmniMesh"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+omnimesh-core.workspace = true
+snow.workspace = true
+chacha20poly1305.workspace = true
+blake3.workspace = true
+hkdf.workspace = true
+sha2.workspace = true
+rand.workspace = true
+zeroize.workspace = true
+serde.workspace = true
+tracing.workspace = true
+bytes.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true

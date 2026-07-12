@@ -1,0 +1,31 @@
+[package]
+name = "omnimesh-sdk"
+description = "High-level SDK for OmniMesh — uniform API across Rust, Python, Swift, Kotlin, C#, Go"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+omnimesh-core.workspace = true
+omnimesh-identity.workspace = true
+omnimesh-crypto.workspace = true
+omnimesh-transport.workspace = true
+omnimesh-routing.workspace = true
+omnimesh-discovery.workspace = true
+omnimesh-service.workspace = true
+tokio.workspace = true
+serde.workspace = true
+tracing.workspace = true
+dashmap.workspace = true
+parking_lot.workspace = true
+bytes.workspace = true
+async-trait.workspace = true
+bincode.workspace = true
+
+[dev-dependencies]
+tracing-subscriber.workspace = true
+
+[[bench]]
+name = "performance"
+harness = false

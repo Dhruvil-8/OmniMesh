@@ -1,0 +1,8 @@
+/target
+/fuzz/target
+**/*.rs.bk
+Cargo.lock
+*.swp
+*.swo
+.env
+.DS_Store
